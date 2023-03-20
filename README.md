@@ -21,11 +21,11 @@ using postman you can test the api's
  => user can create authorization key using base64 encoder fo this we need to encode client Id:client Secret using this online tool(https://www.base64encode.org/) we can generate the authorization key which we can use to call the forecast summary and hourly api's.
  
   
-  Example : Client id : QZmf8p5mdyTyp_Z5kCjTnQ==   Client Secret : 5Mw-ArBV_YaxXBXOfLf4YkXjEeFGgdjZibSwldKFnlSE= 
+  Example : Client id : -e4AZbe1NV_fwrv4jHNR-Q==   Client Secret : GEveECG7PPUdbCs21jxScpYysXxqV1hRj7TH1589sJg= 
   
-     Need to generate Authorization Key = using Base64 encode this : QZmf8p5mdyTyp_Z5kCjTnQ==:Mw-ArBV_YaxXBXOfLf4YkXjEeFGgdjZibSwldKFnlSE=     
+     Need to generate Authorization Key = using Base64 encode this : -e4AZbe1NV_fwrv4jHNR-Q==:GEveECG7PPUdbCs21jxScpYysXxqV1hRj7TH1589sJg=
      
-     Authorization Key =>  Basic UVptZjhwNW1keVR5cF9aNWtDalRuUT09Ok13LUFyQlZfWWF4WEJYT2ZMZjRZa1hqRWVGR2dkalppYlN3bGRLRm5sU0U9 
+     Authorization Key =>  Basic LWU0QVpiZTFOVl9md3J2NGpITlItUT09OkdFdmVFQ0c3UFBVZGJDczIxanhTY3BZeXNYeHFWMWhSajdUSDE1ODlzSmc9
    
 2 : Forecast summary Api : GET => http://localhost:8080/api/weather/forecast-summary/Berlin 
 
