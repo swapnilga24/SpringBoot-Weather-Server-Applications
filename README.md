@@ -11,34 +11,34 @@ API Document: https://rapidapi.com/wettercom-wettercom-default/api/forecast9 (Ra
 
 Solutions :
 
-To run this spring boot application first clone this repo and run the DemoApplication.java file. after this server will be start running on port 8080 
-using postman you can test the api's
+To run this Spring Boot application, first clone this repository and run the DemoApplication.java file. After this, the server will start running on port 8080. Using Postman, you can test the APIs.
 
-1 : First Try login Api : GET => http://localhost:8080/login 
+1 : First, try the login API: GET => http://localhost:8080/login.
 
- => This api will return the client Id and client secret as response. user need to use this id and secret to generate the authorization key 
- 
- => user can create authorization key using base64 encoder fo this we need to encode client Id:client Secret using this online tool(https://www.base64encode.org/) we can generate the authorization key which we can use to call the forecast summary and hourly api's.
- 
+    This API will return the client ID and client secret as a response. Users need to use this ID and secret to generate the authorization key.
+
+    Users can create the authorization key using a base64 encoder. For this, we need to encode the client ID and client secret using this online tool (https://www.base64encode.org/). Please add a colon between the ID and secret while encoding to base64. We can use the generated authorization key to call the forecast summary and hourly APIs.
+    
+  Example: Client ID:  -e4AZbe1NV_fwrv4jHNR-Q==, Client Secret: GEveECG7PPUdbCs21jxScpYysXxqV1hRj7TH1589sJg=
+
+  To generate the authorization key, use Base64 to encode this: -e4AZbe1NV_fwrv4jHNR-Q==:GEveECG7PPUdbCs21jxScpYysXxqV1hRj7TH1589sJg=
+
+  Authorization key: Basic LWU0QVpiZTFOVl9md3J2NGpITlItUT09OkdFdmVFQ0c3UFBVZGJDczIxanhTY3BZeXNYeHFWMWhSajdUSDE1ODlzSmc9
+   
+
+2 : Forecast summary API: GET => http://localhost:8080/api/weather/forecast-summary/Berlin.
+
+  Here, we need to pass the header Authorization with the value Basic + Authorization Key.
+
+  To obtain the Authorization Key, we generated it from the login API using Base64.
+
+  This API will return a JSON object containing an array of objects with weather details for the next 16 days.
   
-  Example : Client id : -e4AZbe1NV_fwrv4jHNR-Q==   Client Secret : GEveECG7PPUdbCs21jxScpYysXxqV1hRj7TH1589sJg= 
-  
-     Need to generate Authorization Key = using Base64 encode this : -e4AZbe1NV_fwrv4jHNR-Q==:GEveECG7PPUdbCs21jxScpYysXxqV1hRj7TH1589sJg=
-     
-     Authorization Key =>  Basic LWU0QVpiZTFOVl9md3J2NGpITlItUT09OkdFdmVFQ0c3UFBVZGJDczIxanhTY3BZeXNYeHFWMWhSajdUSDE1ODlzSmc9
-   
-2 : Forecast summary Api : GET => http://localhost:8080/api/weather/forecast-summary/Berlin 
 
-   => here , we need to pass the header : Authorization (key) : Basic + AuthorizationKey (value)
-   
-      we need to use AuthorizationKey which we generted from login api and using base64.
-      
-   => this api will return the json object which contains the array of object for next 16 days weather details objects.
-   
-3 : Forecast Hourly Api : GET => http://localhost:8080/api/weather/hourly/Berlin
+3 : Forecast hourly API: GET => http://localhost:8080/api/weather/hourly/Berlin.
 
-   => here , we need to pass the header : Authorization (key) : Basic + AuthorizationKey (value)
-   
-      we need to use AuthorizationKey which we generted from login api and using base64.
-      
-   =>this api will return the json object which contain array of object for next 16 days hourly weather details objects.
+  Here, we need to pass the header Authorization with the value Basic + Authorization Key.
+
+  To obtain the Authorization Key, we generated it from the login API using Base64.
+
+  This API will return a JSON object containing an array of objects with hourly weather details for the next 16 days.
