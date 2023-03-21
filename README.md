@@ -28,7 +28,9 @@ To run this Spring Boot application, first clone this repository and run the Dem
 
   Authorization key: Basic LWU0QVpiZTFOVl9md3J2NGpITlItUT09OkdFdmVFQ0c3UFBVZGJDczIxanhTY3BZeXNYeHFWMWhSajdUSDE1ODlzSmc9
    
-   
+   ![Screenshot (11)](https://user-images.githubusercontent.com/39656416/226533225-7bd5cbc5-9750-42a9-afda-1253b53cc984.png)
+    ![Screenshot (12)](https://user-images.githubusercontent.com/39656416/226533323-4c0bf859-e78a-448f-a41e-7acbba85ccaf.png)
+
 
 2* : Forecast summary API: GET => http://localhost:8080/api/weather/forecast-summary/Berlin.
 
@@ -37,7 +39,8 @@ To run this Spring Boot application, first clone this repository and run the Dem
   To obtain the Authorization Key, we generated it from the login API using Base64.
 
   This API will return a JSON object containing an array of objects with weather details for the next 16 days.
-  
+  ![Screenshot (9)](https://user-images.githubusercontent.com/39656416/226533360-9bb4ad9c-d2c6-45a0-9e31-e7228657500a.png)
+
 
 
 3* : Forecast hourly API: GET => http://localhost:8080/api/weather/hourly/Berlin.
@@ -47,3 +50,13 @@ To run this Spring Boot application, first clone this repository and run the Dem
   To obtain the Authorization Key, we generated it from the login API using Base64.
 
   This API will return a JSON object containing an array of objects with hourly weather details for the next 16 days.
+ ![Screenshot (10)](https://user-images.githubusercontent.com/39656416/226533380-7e6f71dc-75b2-4a01-93c2-0d7c363055ad.png)
+
+
+Please feel free to reach out with any queries:
+
+Name : Swapnil Ahire 
+
+Email : SwapnilAhire.sde@gmail.com
+
+Linkedin : https://www.linkedin.com/in/swapnil-ahire/
