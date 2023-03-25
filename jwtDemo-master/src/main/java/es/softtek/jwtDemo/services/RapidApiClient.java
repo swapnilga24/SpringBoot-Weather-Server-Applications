@@ -1,7 +1,7 @@
-package com.weather.demo.repositories;
+package es.softtek.jwtDemo.services;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.weather.demo.models.ForecastSummary;
-import com.weather.demo.models.HourlyForecast;
+import es.softtek.jwtDemo.dto.ForecastSummary;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -52,11 +52,11 @@ public class RapidApiClient {
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
         String response = responseEntity.getBody();
-
+        //String response = "{}";
         return objectMapper.readValue(response, ForecastSummary.class);
     }
 
-    public HourlyForecast getHourlyForecastByLocationName(String locationName) throws Exception {
+    public ForecastSummary getHourlyForecastByLocationName(String locationName) throws Exception {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
@@ -70,7 +70,8 @@ public class RapidApiClient {
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
         String response = responseEntity.getBody();
+        //String response = "{}";
         
-        return objectMapper.readValue(response, HourlyForecast.class);
+        return objectMapper.readValue(response, ForecastSummary.class);
     }
 }

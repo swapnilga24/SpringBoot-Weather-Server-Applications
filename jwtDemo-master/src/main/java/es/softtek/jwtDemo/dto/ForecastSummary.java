@@ -1,9 +1,8 @@
-package com.weather.demo.models;
+package es.softtek.jwtDemo.dto;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import jakarta.annotation.Generated;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /*
@@ -16,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
         "location",
         "forecast"
 })
-@Generated("jsonschema2pojo")
 public class ForecastSummary {
     @JsonProperty("location")
     private Location location;
@@ -30,7 +28,6 @@ public class ForecastSummary {
         "name",
         "timezone"
 })
-@Generated("jsonschema2pojo")
 class Location {
 
     @JsonProperty("code")
@@ -48,7 +45,6 @@ class Location {
         "items",
         "forecastDate"
 })
-@Generated("jsonschema2pojo")
 class Forecast {
 
     @JsonProperty("items")
@@ -75,7 +71,6 @@ class Forecast {
         "snowLine",
         "astronomy"
 })
-@Generated("jsonschema2pojo")
 class Item {
     @JsonProperty("date")
     private String date;
@@ -123,7 +118,6 @@ class Item {
         "text",
         "icon"
 })
-@Generated("jsonschema2pojo")
 class Weather {
     @JsonProperty("state")
     private Integer state;
@@ -140,7 +134,6 @@ class Weather {
         "sumAsRain",
         "class"
 })
-@Generated("jsonschema2pojo")
 class Prec {
     @JsonProperty("sum")
     private Double sum;
@@ -158,7 +151,6 @@ class Prec {
         "max",
         "avg"
 })
-@Generated("jsonschema2pojo")
 class Temperature {
     @JsonProperty("min")
     private Integer min;
@@ -179,7 +171,6 @@ class Temperature {
         "gusts",
         "significationWind"
 })
-@Generated("jsonschema2pojo")
 class Wind {
     @JsonProperty("unit")
     private String unit;
@@ -203,7 +194,6 @@ class Wind {
         "max",
         "avg"
 })
-@Generated("jsonschema2pojo")
 class Windchill {
     @JsonProperty("min")
     private Integer min;
@@ -220,7 +210,6 @@ class Windchill {
         "max",
         "unit"
 })
-@Generated("jsonschema2pojo")
 class SnowLine {
     @JsonProperty("avg")
     private Object avg;
@@ -245,7 +234,6 @@ class SnowLine {
         "moonphase",
         "moonzodiac"
 })
-@Generated("jsonschema2pojo")
 class Astronomy {
 
     @JsonProperty("dawn")
