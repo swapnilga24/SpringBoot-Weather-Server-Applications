@@ -46,6 +46,11 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 		String path = request.getRequestURI().substring(request.getContextPath().length());
 		if (path.equals("/login")) {
 			// Generate random client ID and secret
+			if(!request.getHeader("email").equals("swapnilahire.sde@gmail.com")){
+				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+				response.getWriter().write("UNAUTHORIZED Error");
+				return;
+			}
 			generateClientIdAndSecret();
 			
 			// Save client ID and secret to file
