@@ -1,3 +1,13 @@
 # SpringBoot-Weather-Server-Applications
 
-Token-based API authentication with Spring and JWT
+Problem Statement : Write a server by using SpringBoot Java and integrate Weather API from Rapid API. On the basis of that integration, expose your RESTful APIs as follows with JSON response. Authentication Method: Header-based authentication with random client id and random client secret.
+
+API 1: Get the Weather forecast summary of Any city using API (RapidApiGetForecastSummaryByLocationName)
+
+API 2: Get hourly Weather forecast details of Any city using API (RapidApiGetHourlyForecastByLocationName)
+
+API Document: https://rapidapi.com/wettercom-wettercom-default/api/forecast9 (RapidApiGetForecastSummaryByLocationName & RapidApiGetHourlyForecastByLocationName)
+
+Solutions :
+
+To run this Spring Boot application, first clone this repository and run the DemoApplication.java file. After this, the server will start running on port 8080. Using Postman, you can test the APIs.
