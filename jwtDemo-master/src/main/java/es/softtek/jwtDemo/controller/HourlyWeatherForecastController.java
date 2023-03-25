@@ -1,8 +1,10 @@
-package com.weather.demo.controllers;
+package es.softtek.jwtDemo.controller;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import com.weather.demo.models.HourlyForecast;
-import com.weather.demo.services.WeatherService;
+import es.softtek.jwtDemo.dto.ForecastSummary;
+import es.softtek.jwtDemo.services.RapidApiClient;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,12 +19,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class HourlyWeatherForecastController {
 
     @Autowired
-    private WeatherService weatherService;
+    private RapidApiClient rapidApiClient;
 
     @GetMapping("/hourly/{locationName}")
-    public ResponseEntity<HourlyForecast> getHourlyForecastByLocationName(@PathVariable String locationName) {
+    public ResponseEntity<ForecastSummary> getHourlyForecastByLocationName(@PathVariable String locationName) {
         try {
-            HourlyForecast hourlyForecast = weatherService.getHourlyForecastByLocationName(locationName);
+            ForecastSummary hourlyForecast = rapidApiClient.getHourlyForecastByLocationName(locationName);
             return new ResponseEntity<>(hourlyForecast, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
