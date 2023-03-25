@@ -20,7 +20,9 @@ To run this Spring Boot application, first clone this repository and run the Dem
     
   Example: 
   Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzd2FwbmlsSUQiLCJzdWIiOiJzd2FwbmlsYWhpcmUuc2RlQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2Nzk3NzQwODUsImV4cCI6MTY3OTc3NDY4NX0.OH-HBZzyTMLDwW9sCHg66o6yU7o2slC5c76nNF4c_1x8eGBhQqYmVkOSPybkULFGEiI7_OKii2V2Ma44ZargEQ
- 
+ ![Screenshot (17)](https://user-images.githubusercontent.com/39656416/227740576-d21b1e55-bb73-4549-8ca8-ab6ed48ee546.png)
+![Screenshot (20)](https://user-images.githubusercontent.com/39656416/227740583-6a63d6a9-daf3-4887-beff-38413a274e51.png)
+
 
 2* : Forecast summary API: GET => http://localhost:8080/api/weather/forecast-summary/Berlin.
 
@@ -29,6 +31,7 @@ To run this Spring Boot application, first clone this repository and run the Dem
   To obtain the JWT TOken, we generated it from the login API.
 
   This API will return a JSON object containing an array of objects with weather details for the next 16 days.
+![Screenshot (18)](https://user-images.githubusercontent.com/39656416/227740594-43cb8876-fb07-4e6d-a77c-b338c50bc194.png)
 
 
 
@@ -39,6 +42,7 @@ To run this Spring Boot application, first clone this repository and run the Dem
   To obtain the JWT Token, we generated it from the login API.
 
   This API will return a JSON object containing an array of objects with hourly weather details for the next 16 days.
+![Screenshot (19)](https://user-images.githubusercontent.com/39656416/227740606-b4983c44-1f5c-41f9-be81-470e1a942d33.png)
 
 
 Please feel free to reach out with any queries:
