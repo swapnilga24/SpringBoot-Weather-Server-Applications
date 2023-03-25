@@ -21,3 +21,30 @@ To run this Spring Boot application, first clone this repository and run the Dem
   Example: 
   Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzd2FwbmlsSUQiLCJzdWIiOiJzd2FwbmlsYWhpcmUuc2RlQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2Nzk3NzQwODUsImV4cCI6MTY3OTc3NDY4NX0.OH-HBZzyTMLDwW9sCHg66o6yU7o2slC5c76nNF4c_1x8eGBhQqYmVkOSPybkULFGEiI7_OKii2V2Ma44ZargEQ
  
+
+2* : Forecast summary API: GET => http://localhost:8080/api/weather/forecast-summary/Berlin.
+
+  Here, we need to pass the header Authorization with the value Authorization Key(JWT Token).
+
+  To obtain the JWT TOken, we generated it from the login API.
+
+  This API will return a JSON object containing an array of objects with weather details for the next 16 days.
+
+
+
+3* : Forecast hourly API: GET => http://localhost:8080/api/weather/hourly/Berlin.
+
+  Here, we need to pass the header Authorization with the value Authorization Key(JWT Token).
+
+  To obtain the JWT Token, we generated it from the login API.
+
+  This API will return a JSON object containing an array of objects with hourly weather details for the next 16 days.
+
+
+Please feel free to reach out with any queries:
+
+Name : Swapnil Ahire 
+
+Email : SwapnilAhire.sde@gmail.com
+
+Linkedin : https://www.linkedin.com/in/swapnil-ahire/
